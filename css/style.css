@@ -1,18 +1,14 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
 :root {
   --gray-color: #777;
   --light-green: rgba(126, 213, 111, 0.8);
   --medium-green: rgba(85, 197, 122, 0.8);
   --dark-green: rgba(40, 180, 133, 0.8);
+  font-size: 62.5%;
 }
-* {
+
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,7 +17,7 @@ Dark green: #28b485
 body {
   font-family: "lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: var(--gray-color);
   padding: 30px;
@@ -42,16 +38,16 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
-.logo {
-  height: 35px;
+.header__logo {
+  height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -64,20 +60,20 @@ body {
   color: #fff;
   font-weight: 700;
   backface-visibility: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
-.heading-primary-main {
+.heading-primary--main {
   display: block;
-  font-size: 60px;
-  letter-spacing: 35px;
+  font-size: 6rem;
+  letter-spacing: 3.5rem;
   font-weight: 700;
 
   animation: moveInLeft 1s ease-out;
 }
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
-  font-size: 20px;
-  letter-spacing: 15px;
+  font-size: 2rem;
+  letter-spacing: 1.5rem;
   font-weight: 700;
   animation: moveInRight 1s ease-out;
 }
@@ -85,10 +81,10 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   100% {
     opacity: 1;
@@ -99,10 +95,10 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   100% {
     opacity: 1;
@@ -114,13 +110,11 @@ body {
 .bnt:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
-  animation: moveInBottom 0.5s 0.75s ease-out;
-  animation-fill-mode: backwards;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -130,7 +124,7 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: var(--gray-color);
 }
@@ -158,10 +152,14 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(10rem);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.btn--animated {
+  animation: moveInBottom 0.5s 0.75s ease-out;
+  animation-fill-mode: backwards;
 }
