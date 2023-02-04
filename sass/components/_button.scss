@@ -28,6 +28,16 @@
   &--white {
     background-color: $color-white;
     color: $gray-color;
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  &--green {
+    background-color: $medium-green;
+    color: $color-white;
+    &::after {
+      background-color: $medium-green;
+    }
   }
 
   &::after {
@@ -41,7 +51,6 @@
     left: 0;
     z-index: -1;
     transition: 0.4s;
-    background-color: $color-white;
   }
 
   &--animated {

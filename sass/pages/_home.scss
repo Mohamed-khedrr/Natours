@@ -35,7 +35,7 @@
   position: relative;
   &__photo {
     max-width: 55%;
-    box-shadow: 0 1rem 4rem rgba($color-black, 0.2);
+    box-shadow: $primary-box-shadow;
     border: 2px;
     position: absolute;
     transition: all 0.2s;
@@ -85,7 +85,7 @@
     padding: 2.5rem;
     text-align: center;
     border-radius: 0.3rem;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+    box-shadow: $primary-box-shadow;
     transition: all 0.2s;
 
     &__icon {
@@ -103,4 +103,10 @@
       transform: translateY(-1.5rem) scale(1.1);
     }
   }
+}
+
+.section-tours {
+  background-color: $color-gray-light-1;
+  margin-top: -10rem;
+  padding: 27rem 0 50rem;
 }
