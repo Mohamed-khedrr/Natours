@@ -1,11 +1,16 @@
 @import "./abstract/variables";
 @import "./abstract/mixins";
+
 @import "./base/base";
 @import "./base/animatinos";
 @import "./base/utilities";
+
 @import "./components/button";
 @import "./components/card";
 @import "./components/form";
-@import "./layout/header";
+
 @import "./layout/grid";
+@import "./layout/header";
+@import "./layout/footer";
+
 @import "./pages/home";
