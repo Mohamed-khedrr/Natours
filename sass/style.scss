@@ -5,9 +5,11 @@
 @import "./base/animatinos";
 @import "./base/utilities";
 
+@import "./components/_nav";
 @import "./components/button";
 @import "./components/card";
 @import "./components/form";
+@import "./components/popup";
 
 @import "./layout/grid";
 @import "./layout/header";
