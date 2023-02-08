@@ -6,16 +6,51 @@
   top: 0;
   left: 0;
   background-color: rgba($color-black, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $dark-gray;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+      line-height: 1;
+    }
+    &:hover {
+      color: $dark-green;
+    }
+  }
 
   &__content {
+    @include center-element;
     width: 75%;
     background-color: $color-white;
     box-shadow: $primary-box-shadow;
-    @include center-element;
     border-radius: 0.3rem;
     display: table;
     overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+    transition: all 0.4s 0.2s;
   }
+
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
   &__left {
     width: calc(100% / 3);
     display: table-cell;
