@@ -1068,8 +1068,28 @@ body {
   font-size: 1.6rem;
   transform: skewX(-12deg);
 }
+@media (max-width: 56.25em) {
+  .story {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 6rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .story {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 6rem;
+    transform: skewX(0);
+  }
+}
 .story > * {
   transform: skewX(12deg);
+}
+@media (max-width: 37.5em) {
+  .story > * {
+    transform: skewX(0);
+  }
 }
 .story__shape {
   display: flex;
@@ -1083,6 +1103,11 @@ body {
           clip-path: circle(50% at 50% 50%);
   transform: translate(-3rem);
   position: relative;
+}
+@media (max-width: 56.25em) {
+  .story__shape {
+    margin-right: 1rem;
+  }
 }
 .story__shape img {
   height: 100%;

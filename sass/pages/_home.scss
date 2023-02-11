@@ -165,6 +165,7 @@
   }
 }
 
+// ============================================
 .section-stories {
   padding: 15rem 0;
   position: relative;
@@ -173,6 +174,7 @@
     padding: 10rem 0;
   }
 }
+
 .story {
   width: 75%;
   margin: 0 auto;
@@ -183,14 +185,36 @@
   padding-left: 9rem;
   font-size: 1.6rem;
   transform: skewX(-12deg);
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 6rem;
+  }
+  @include respond(phone) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 6rem;
+    transform: skewX(0);
+  }
+
   & > * {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__shape {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include respond(tab-port) {
+      margin-right: 1rem;
+    }
+
     img {
       height: 100%;
       transform: scale(1.4);
