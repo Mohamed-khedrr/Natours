@@ -1,6 +1,10 @@
 @import "./abstract/variables";
 @import "./abstract/mixins";
 
+@import "./layout/grid";
+@import "./layout/header";
+@import "./layout/footer";
+
 @import "./base/base";
 @import "./base/animatinos";
 @import "./base/utilities";
@@ -10,9 +14,5 @@
 @import "./components/card";
 @import "./components/form";
 @import "./components/popup";
-
-@import "./layout/grid";
-@import "./layout/header";
-@import "./layout/footer";
 
 @import "./pages/home";
