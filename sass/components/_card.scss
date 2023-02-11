@@ -6,6 +6,13 @@
   // PERSPECTIVE TO ENABLE 3D ROTATION
   perspective: 150rem;
 
+  @include respond(tab-port) {
+    height: auto;
+    border-radius: 0.5rem;
+    background-color: $color-white;
+    box-shadow: $primary-box-shadow;
+  }
+
   &__side {
     height: 52rem;
     transition: all 0.8s ease;
@@ -17,8 +24,21 @@
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: $primary-box-shadow;
+
+    @include respond(tab-port) {
+      height: auto;
+      position: relative;
+      border-radius: 0.5rem;
+      box-shadow: none;
+    }
+
     &-back {
       transform: rotateY(180deg);
+
+      @include respond(tab-port) {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
 
       // SPECIAL DESIGN FOR CARD NUM-1
       &-1 {
@@ -53,10 +73,18 @@
   &:hover &__side {
     &-front {
       transform: rotateY(180deg);
+
+      @include respond(tab-port) {
+        transform: rotateY(0);
+      }
     }
 
     &-back {
       transform: rotateY(360deg);
+
+      @include respond(tab-port) {
+        transform: rotateY(0);
+      }
     }
   }
 
@@ -144,6 +172,11 @@
       margin: auto;
       text-align: center;
       font-size: 1.5rem;
+
+      @include respond(tab-port) {
+        padding: 1rem 3rem;
+      }
+
       li {
         padding: 1rem;
         &:not(:last-child) {
@@ -161,10 +194,23 @@
     transform: translate(-50%, -50%);
     width: 90%;
     text-align: center;
+
+    @include respond(tab-port) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 6rem 0 4rem;
+    }
   }
   &__price-box {
     margin-bottom: 8rem;
     color: $color-white;
+
+    @include respond(tab-port) {
+      margin-bottom: 3rem;
+    }
   }
   &__price-only {
     font-size: 1.4rem;
@@ -173,5 +219,11 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 100;
+
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
   }
+
+  // =============================================================================
 }

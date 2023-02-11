@@ -8,7 +8,19 @@
 
 :root {
   // DEFINE THE DEFAULT SIZE AS 10PX
-  font-size: 62.5%;
+  font-size: 62.5%; //1rem = 10px
+
+  @include respond(tab-land) {
+    font-size: calc(9 * 100% / 16); // 1rem = 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px
+  }
 }
 
 body {
@@ -18,4 +30,8 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   color: $gray-color;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
